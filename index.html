@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Brokesellers is a leading digital creative agency offering web development, graphic design, digital marketing, and data management services.">
+<meta name="keywords" content="digital creative agency, web development, graphic design, digital marketing, data management, Brokesellers">
+<title>Brokesellers - Your Digital Creative Hub</title>
+
+<link rel="icon" type="image/x-icon" href="img/logo/super-final-logodpi.png">
+<link href="main.css" rel="stylesheet" />
+<link href="form.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet" />
+</head>
+<body class="body">
+<div class="container" style="position: relative">
+<!-- Topbar --
+<div class="topbar"><marquee scrollamount="5" style="width:100%">Coming Soon</marquee></div>
+<!- Topbar End -->
+
+
+<!-- Header -->
+<div class="header" title="Brokesellers">
+	<div class="anim-wrapper">
+		<div class="white">
+			<div class="squares">
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+			</div>
+		</div>
+		<div class="grey"></div>
+	</div>
+	<div class="brand-header">
+		<div class="brand-logo">
+			<img id="logo" src="img/logo/super-final-logodpi.png" />
+		</div>
+		<div class="brand-name">
+			<h1>Brokesellers</h1>
+		</div>
+		<div class="brand-slogan">
+		<p>Digital Creative Hub</p>
+		</div>
+	</div>
+</div>
+<!-- Header End-->
+
+<!-- Navigation Bar -->
+<div class="mobile-menu" id="menu" onclick="showMe()">
+	<div class="toggle" id="toggle"></div>
+</div>
+<div class="navbar" id="navbar">
+	<a href="#" onclick="loadPage('index.html')" class="first-link">Home</a>
+	<a href="#services" onclick="loadPage('index.html#services')">Services</a>
+	<a href="#portfolio" onclick="loadPage('index.html#portfolio')">Portfolio</a>
+	<a href="#pricing" onclick="loadPage('index.html#pricing')">Pricing</a>
+	<!--<a href="#blog" onclick="loadPage('index.html#blog')">Blog</a>-->
+	<a href="users" target="_blank">Lab</a>
+	<a href="#contact" class="linkbtn">Contact</a>
+	<!--<a href="#" onclick="pop()" class="signing">Signup</a>-->
+	<!--<a href="#profile" onclick="loadPage('profile.html')" class="profilebtn">Profile</a>-->
+</div>
+<!-- Navigation Bar End-->
+
+
+<!-- Signup/Login Modal -->
+<div id="modal" style="display: none;">
+	<div class="form-container" id="signup">
+		<form action="signup.php" id="signupForm" method="POST" name="signupForm">
+			<h2>Create Account</h2>
+			<div class="form-group">
+				<input class="form-control" id="signup-username" name="username" placeholder="Name" required type="text" autocomplete="given-name"/>
+			</div>
+			<div class="form-group">
+				<input class="form-control" id="signup-email" name="email" placeholder="Email" required type="email" autocomplete="email"/>
+			</div>
+			<div class="form-group">
+				<input class="form-control" id="signup-password" name="password" placeholder="Password" required type="password" autocomplete="new-password"/>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" id="signup-description" name="description" placeholder="About"></textarea>
+			</div>
+			<div class="form-group">
+				<select class="form-control" id="signup-role" name="role">
+					You are a
+					<option value="1" class="form-role">Business</option>
+					<option value="2" class="form-role"selected>Team</option>
+					<option value="3" class="form-role">Individual</option>
+				</select>
+			</div>
+			<fieldset>
+				<legend>You want to</legend>
+				<label>
+					<input type="radio" name="type" value="1">
+					Buy
+				</label>
+				<label>
+					<input type="radio" name="type" value="2" checked>
+					Sell
+				</label>
+				<label>
+					<input type="radio" name="type" value="3">
+					Just Register
+				</label>
+			</fieldset>
+			<div class="form-group">
+				<label>
+					<input type="checkbox" name="terms" required>
+					I agree to the terms and conditions.
+				</label>
+			</div>
+			<div class="form-group">
+				<button class="btn" type="submit">Signup</button>
+				Already have account? Login instead
+				<button class="btn secondary-btn" type="button" href="login-form.html"    >Login</button>
+			</div>
+		</form>
+	</div>
+	<div class="form-container" id="login">
+		<form action="login.php" id="loginForm" method="POST" name="loginForm">
+			<h2>Login</h2>
+			<div class="form-group">
+				<input class="form-control" id="username" name="username" placeholder="Username" required type="username" autocomplete="username"/>
+			</div>
+			<div class="form-group">
+				<input class="form-control" id="password" name="password" placeholder="Password" required type="password" autocomplete="current-password"/>
+			</div>
+			<div class="form-group">
+				<label>
+					<input type="checkbox" name="session">
+					Keep me logged-in.
+				</label>
+			</div>
+			<div class="form-group">
+				<button class="btn" type="submit">Login</button>
+				New user? Create account
+				<button class="btn secondary-btn" type="submit">Signup</button>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- Signup/Login Modal End -->
+
+
+<!-- Content (dynamic pages)--
+<div class="content" id="content">
+
+
+</div>
+-- Content End -->
+
+
+
+
+
+
+<!-- Home -->
+<!-- Hero -->
+<div class="hero">
+	<h2>Boost your online presence...</h2>
+
+	<div class="svg-wrapper">
+		<svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+			<rect height="40" id="shape" width="150"></rect>
+		</svg>
+		<div id="text">
+			<a href="">Explore</a>
+		</div>
+	</div>
+</div>
+<!-- Hero End-->
+
+<!-- Main -->
+<div class="main">
+	<div class="section" id="intro">
+		<div class="intro-heading">
+			<h2>Personalized Solutions For Your Unique Business Needs</h2>
+		</div>
+
+		<div class="intro-content">
+			<p>We specialize in Front-end &amp; Back-end Web Development, Graphic Design, UI/UX, Prototyping and Print Media Services.<br />	Hire a Professional or pick from a collection of well-curated plans designed by our team.</p>
+		</div>
+	</div>
+
+	<!-- Services -->
+	<div class="section" id="services">
+		<div class="section-heading">
+			<h2>Services</h2>
+		</div>
+		<div class="services">
+			<div id="service-1" class="service flex-row-responsive">
+				<div class="service-img">
+					<img src="/img/bs-graphic-design.png" alt="Graphic Design Services">
+				</div>
+				<div class="flex-col">
+					<h3>Graphic Designing</h3>
+					<p>Digital Media | Print Media<br>
+						Branding | Customization | Merchandise
+					</p>
+					<a href="#contact">Pricing &gt;</a>
+				</div>
+			</div>
+
+			<div id="service-2" class="service flex-row-responsive">
+				<div class="service-img">
+					<img src="/img/bs-web-design.png" alt="Web Development Services">
+				</div>
+				<div class="flex-col">
+					<h3>Web Development</h3>
+					<p>UI/UX | Prototype | Web Design<br>
+						Web Apps | E-Commerce | Online Store<br>
+						Community,  Social & Sharing Websites<br>
+						Forum | Showcase | Portfolio
+					</p>
+					<a href="#contact">Pricing &gt;</a>
+				</div>
+			</div>
+
+			<div id="service-3" class="service flex-row-responsive">
+				<div class="service-img">
+					<img src="/img/bs-social-media.png" alt="Digital Marketing Services">
+				</div>
+				<div class="flex-col">
+					<h3>Digital Marketing</h3>
+					<p>Email Marketing | Social Media Marketing <br>
+						Organic Promotion | Paid Promotion<br>
+						PPC | SEO
+					</p>
+					<a href="#contact">Pricing &gt;</a>
+				</div>
+			</div>
+
+			<div id="service-4" class="service flex-row-responsive">
+				<div class="service-img">
+					<img src="/img/bs-data-management.png" alt="Data Management Services">
+				</div>
+				<div class="flex-col">
+					<h3>Data Management</h3>
+					<p>Collection | Analysis | Presentation<br>
+						Visualisation | Documentation | Validation<br>
+						Dashboards | Docs | Sheets
+					</p>
+					<a href="#contact">Pricing &gt;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Services End -->
+
+	<!-- Portfolio -->
+	<section class="section" id="portfolio">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="text-center">
+					<div class="section-heading">
+						<h2>Portfolio</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-menu">
+				<nav class="controls">
+                    <button class="control outline active" data-filter="all" type="button">All</button>
+                    <button class="control outline" data-filter="web" type="button">Web Development</button>
+                    <button class="control outline" data-filter="graphics" type="button">Graphic Design</button>
+                    <button class="control outline" data-filter="marketing" type="button">Digital Marketing</button>
+                    <button class="control outline" data-filter="management" type="button">Data Management</button>
+                    <button class="control outline" data-filter="management" type="button">Mobile App</button>
+                </nav>
+			</div>
+
+			<ul class="row portfolio-item">
+				<li class="mix graphics pd" data-control="graphics">
+					<img alt="Image description" itemprop="thumbnail" src="bs-graphic-design.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Metablazon</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-graphic-design.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix marketing pd" data-control="marketing">
+					<img alt="Image description" itemprop="thumbnail" src="s-social-media.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">CelloLite</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-social-media.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix graphics pd" data-control="graphics">
+					<img alt="Image description" itemprop="thumbnail" src="bs-graphic-design.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Roosari</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-graphic-design.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix management pd" data-control="management">
+					<img alt="Image description" itemprop="thumbnail" src="bs-data-management.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Azwa Pharmaceutical Distribution</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-data-management.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix web pd" data-control="web">
+					<img alt="Image description" itemprop="thumbnail" src="bs-web-design.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Novaxis Healthcare</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-web-design.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix management pd" data-control="management">
+					<img alt="Image description" itemprop="thumbnail" src="bs-data-management.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Alpha Evolution Enterprises</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-data-management.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix web pd" data-control="web">
+					<img alt="Image description" itemprop="thumbnail" src="bs-web-design.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Azwa Enterprises</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-web-design.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix graphics pd" data-control="graphics">
+					<img alt="Image description" itemprop="thumbnail" src="bs-graphic-design.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Coinovy</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-graphic-design.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix marketing pd" data-control="marketing">
+					<img alt="Image description" itemprop="thumbnail" src="bs-social-media.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Al Qadir General Hospital</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="img/link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-social-media.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mix web pd" data-control="web">
+					<img alt="Image description" itemprop="thumbnail" src="bs-web-design.png" />
+					<div class="portfolio-overlay">
+						<div class="overlay-content">
+							<p class="category">Nifnexa</p>
+							<div class="magnify-icon">
+								<a href="#" target="_blank" title="View Project"><img class="icon" src="link.svg" /> </a>
+							</div>
+							<div class="magnify-icon">
+								<a data-fancybox="item" href="bs-web-design.png" title="click to zoom-in"><img class="icon" src="img/zoom-in.svg" /> </a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- Portfolio End -->
+
+
+
+
+
+	<!-- Pricing -->
+<section class="pricing section" id="pricing">
+    <div class="flex-col" id="plans-web">
+        <h2 class="section-heading">Web Development</h2>
+        <div class="flex-row-responsive" id="pricing-plans-web">
+            <div class="card flex-col plan-personal">
+                <div class="card-row card-header"><h3>Personal</h3></div>
+                <div class="card-row card-point"><p>Responsive Design</p></div>
+                <div class="card-row card-point"><p>Basic SEO</p></div>
+                <div class="card-row card-point"><p>Up to 5 Pages</p></div>
+                <div class="card-row card-point"><p class="no">E-commerce Integration</p></div>
+                <div class="card-row card-point"><p>1 Month Free Support</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-business">
+                <div class="card-row card-header"><h3>Business</h3></div>
+                <div class="card-row card-point"><p>Responsive Design</p></div>
+                <div class="card-row card-point"><p>Advanced SEO</p></div>
+                <div class="card-row card-point"><p>Up to 15 Pages</p></div>
+                <div class="card-row card-point"><p>E-commerce Integration</p></div>
+                <div class="card-row card-point"><p>3 Months Free Support</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-enterprise">
+                <div class="card-row card-header"><h3>Enterprise</h3></div>
+                <div class="card-row card-point"><p>Custom Design</p></div>
+                <div class="card-row card-point"><p>Full SEO Optimization</p></div>
+                <div class="card-row card-point"><p>Unlimited Pages</p></div>
+                <div class="card-row card-point"><p>Advanced E-commerce</p></div>
+                <div class="card-row card-point"><p>6 Months Free Support</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-col" id="plans-graphic">
+        <h2 class="section-heading">Graphic Design</h2>
+        <div class="flex-row-responsive" id="pricing-plans-graphic">
+            <div class="card flex-col plan-personal">
+                <div class="card-row card-header"><h3>Personal</h3></div>
+                <div class="card-row card-point"><p>Logo Design</p></div>
+                <div class="card-row card-point"><p>Business Card Design</p></div>
+                <div class="card-row card-point"><p>2 Revisions</p></div>
+                <div class="card-row card-point"><p class="no">Marketing Materials</p></div>
+                <div class="card-row card-point"><p>1 Week Delivery</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-business">
+                <div class="card-row card-header"><h3>Business</h3></div>
+                <div class="card-row card-point"><p>Branding Package</p></div>
+                <div class="card-row card-point"><p>Marketing Materials</p></div>
+                <div class="card-row card-point"><p>5 Revisions</p></div>
+                <div class="card-row card-point"><p>Social Media Kit</p></div>
+                <div class="card-row card-point"><p>2 Weeks Delivery</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-enterprise">
+                <div class="card-row card-header"><h3>Enterprise</h3></div>
+                <div class="card-row card-point"><p>Complete Branding</p></div>
+                <div class="card-row card-point"><p>Custom Illustrations</p></div>
+                <div class="card-row card-point"><p>Unlimited Revisions</p></div>
+                <div class="card-row card-point"><p>Advertising Materials</p></div>
+                <div class="card-row card-point"><p>1 Month Delivery</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-col" id="plans-marketing">
+        <h2 class="section-heading">Digital Marketing</h2>
+        <div class="flex-row-responsive" id="pricing-plans-marketing">
+            <div class="card flex-col plan-personal">
+                <div class="card-row card-header"><h3>Personal</h3></div>
+                <div class="card-row card-point"><p>Basic SEO</p></div>
+                <div class="card-row card-point"><p>Social Media Setup</p></div>
+                <div class="card-row card-point"><p>Email Marketing</p></div>
+                <div class="card-row card-point"><p class="no">PPC Management</p></div>
+                <div class="card-row card-point"><p>Monthly Reports</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-business">
+                <div class="card-row card-header"><h3>Business</h3></div>
+                <div class="card-row card-point"><p>Advanced SEO</p></div>
+                <div class="card-row card-point"><p>Social Media Management</p></div>
+                <div class="card-row card-point"><p>Email Campaigns</p></div>
+                <div class="card-row card-point"><p>PPC Management</p></div>
+                <div class="card-row card-point"><p>Weekly Reports</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-enterprise">
+                <div class="card-row card-header"><h3>Enterprise</h3></div>
+                <div class="card-row card-point"><p>Comprehensive SEO</p></div>
+                <div class="card-row card-point"><p>Full Social Media Strategy</p></div>
+                <div class="card-row card-point"><p>Email Automation</p></div>
+                <div class="card-row card-point"><p>PPC and Retargeting</p></div>
+                <div class="card-row card-point"><p>Daily Reports</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-col" id="plans-data">
+        <h2 class="section-heading">Data Management</h2>
+        <div class="flex-row-responsive" id="pricing-plans-data">
+            <div class="card flex-col plan-personal">
+                <div class="card-row card-header"><h3>Personal</h3></div>
+                <div class="card-row card-point"><p>Basic Data Entry</p></div>
+                <div class="card-row card-point"><p>Data Cleanup</p></div>
+                <div class="card-row card-point"><p>Spreadsheet Management</p></div>
+                <div class="card-row card-point"><p class="no">Database Setup</p></div>
+                <div class="card-row card-point"><p>Monthly Reports</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-business">
+                <div class="card-row card-header"><h3>Business</h3></div>
+                <div class="card-row card-point"><p>Data Entry & Cleanup</p></div>
+                <div class="card-row card-point"><p>Database Management</p></div>
+                <div class="card-row card-point"><p>Advanced Analytics</p></div>
+                <div class="card-row card-point"><p>Data Warehousing</p></div>
+                <div class="card-row card-point"><p>Weekly Reports</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+            <div class="card flex-col plan-enterprise">
+                <div class="card-row card-header"><h3>Enterprise</h3></div>
+                <div class="card-row card-point"><p>Complete Data Management</p></div>
+                <div class="card-row card-point"><p>Custom Database Solutions</p></div>
+                <div class="card-row card-point"><p>Predictive Modeling</p></div>
+                <div class="card-row card-point"><p>Data Warehousing</p></div>
+                <div class="card-row card-point"><p>Daily Reports</p></div>
+                <div class="card-row card-footer"><a class="btn" href="#">Select</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<section class="section" id="managed">
+    <div class="section-heading">
+        <h2>Sign up for our managed services and save up to 20%</h2>
+    </div>
+    <div class="flex-row-responsive">
+        <ul>Our managed services include:
+            <li>20% Discount on all services and products.</li>
+            <li>Free consultation.</li>
+            <li>Dedicated team & unlimited support.</li>
+        </ul>
+        <a href="#" class="btn" id="signing-linkbtn">Sign Up</a>
+    </div>
+</section>
+
+<section class="section" id="quot">
+    <div class="section-heading">
+        <h2>Get a Quote</h2>
+    </div>
+    <div class="flex-row-responsive" id="quotation">
+        <p>Let's discuss your needs and project requirements. Contact our team to get a comprehensive project brief and quotation.</p>
+    </div>
+</section>
+<!- Pricing End -->
+
+
+
+
+
+	<!-- Blog -->
+	<section class="section" id="blog">
+		<div class="post">
+			<div class="section-heading">
+				<h2>Blog</h2>
+			</div>
+
+			<div class="section-content">
+				<p>What are <strong>Virtual Workspaces?</strong></p>
+				<h5>Knowledge Base, March 3, 2023</h5>
+				<div class="postimg"></div>
+				<p>The term &ldquo;virtual workspace&rdquo; is generally used to describe a working environment where users digitally connect to each other regardless of their physical location. Users in a virtual workspace work together using tools that foster communication and collaboration.</p>
+				<p>While this type of virtual environment started as a way to replicate a physical office, virtual workspaces are now used to improve efficiency, collaboration, and security.</p><br />
+				<a class="btn" href="#">Read More...</a><br />&nbsp;
+			</div>
+		</div>
+	</section>
+	<!-- Blog End -->
+</div>
+<!-- Main End -->
+<!-- Home End -->
+
+
+
+
+
+
+
+
+<!-- Footer Wrapper Start-->
+<div class="footer-wrapper">
+	<!-- Footer Start-->
+	<div class="footer">
+		<div class="form-container contact" id="contact">
+			<div class="particles-container">
+				<div id="particles-js"></div>
+			</div>
+			<form action="contact-form-handler.php" id="contactForm" method="POST" name="contactForm">
+				<h2>Contact Us</h2>
+				<p>Let's start <span>something</span> great. Fill up this quick form to send a direct message to our team.</p>
+				<div class="form-group">
+					<input class="form-control" id="contact-name" name="name" placeholder="Name" required type="text" autocomplete="given-name"/>
+				</div>
+				<div class="form-group">
+					<input class="form-control" id="contact-email" name="email" placeholder="Email" required type="email" autocomplete="email"/>
+				</div>
+				<div class="form-group">
+					<input class="form-control" id="contact-subject" name="subject" placeholder="Subject" type="text" />
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" id="contact-message" name="message" placeholder="Message"></textarea>
+				</div>
+				<div class="form-group">
+					<input class="btn" type="submit" value="Send Message" />
+				</div>
+			</form>
+			<div class="flex-col">
+				<a class="call" href="https://wa.me/923435581684" target="_blank"><img class="wa" src="img/whatsapp.svg" /></a>
+				<div>
+					<ul class="sitemap">
+						<li class="site"><a href="#">About</a></li>
+						<li class="site"><a href="#services">Services</a></li>
+						<li class="site"><a href="#blog">Blog</a></li>
+						<li class="social"><a href="https://www.linkedin.com/company/brokesellers.pvt.ltd">LinkedIn</a></li>
+					</ul>
+				</div>
+				<div class="brand-footer">
+					<a class="brand-name" href="#">Brokesellers (Pvt) Ltd &reg;</a>
+					<p class="credits">
+						Developed by <a class="developer" href="https://sites.google.com/view/hbgrafix/">HB Grafix</a>A Project of
+						<a class="partner" href="https://www.azwa.pk/">Azwa Enterprises</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="foot"></div>
+	</div>
+	<!-- Footer End -->
+</div>
+<!-- Footer Wrapper End -->
+</div>
+<!-- Container End -->
+
+
+
+<!-- Script Links -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/script/particles.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+<script src="/script/main.js"></script>
+</body>
+</html>

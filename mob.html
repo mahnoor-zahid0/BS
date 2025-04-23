@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="practics.css">
+    <link rel="stylesheet" href="service.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand-container">
+            <div class="brand-logo">
+                <img id="logo" src="logo.png" alt="Brokesellers Logo">
+            </div>
+            <div class="brand-text">
+                <h1 class="brand-name">Brokesellers</h1>
+                <p class="brand-slogan">Mobile App Development</p>
+            </div>
+        </div>
+
+        <button class="toggle-button" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="practics.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(event)">Services ▾</a>
+                <ul class="dropdown-menu" id="services-dropdown">
+                    <li><a href="web.html">Web Application Development</a></li>
+                    <li><a href="mob.html">Mobile App Development</a></li>
+                    <li><a href="seo.html">SEO Optimization</a></li>
+                    <li><a href="data-manage.html">Data Management</a></li>
+                    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="users" target="_blank">Lab</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="mobile-cta"><button class="cta-button"  onclick="goToService('practics.html')">Contact Us</button></li>
+        </ul>
+
+        <!-- CTA Button (Only visible on larger screens) -->
+        <button class="cta-button desktop-cta" onclick="goToService('practics.html')">Contact Us</button>
+    </nav>
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <h1>Elevate Your Business with Expert Mobile App Development</h1>
+            <p>We design and develop high-performing mobile applications that drive growth and innovation.</p>
+            <a href="#pricing" class="service-cta-button">Get Started</a>
+        </div>
+        <div class="service-hero-image" id="hero-image">
+            <img src="bs-web-design.png" alt="Hero Image" id="hero-img">
+        </div>
+    </section>
+    
+    
+    <!-- Features Section -->
+    <section class="service-features">
+        <h2>Why Choose Our Mobile App Development Services?</h2>
+        <div class="service-feature-container">
+            <div class="service-feature">
+                <h3>Custom Mobile App Design</h3>
+                <p>We offer user-friendly and visually appealing mobile app designs.</p>
+            </div>
+            <div class="service-feature">
+                <h3>Responsive & Mobile-Friendly</h3>
+                <p>Our mobile apps provide a seamless experience across all devices.</p>
+            </div>
+            <div class="service-feature">
+                <h3>SEO Optimized</h3>
+                <p>We ensure that your mobile application is optimized for better rankings and performance.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="service-pricing" id="pricing">
+        <h2>Pricing Plans</h2>
+        <p>Choose the best plan for your mobile application needs</p>
+        <div class="service-pricing-options">
+            <div class="service-pricing-card">
+                <h3>Basic</h3>
+                <p>For Small Businesses & Startups</p>
+                <ul>
+                    <li>Responsive Mobile App Design</li>
+                    <li>Basic SEO Optimization</li>
+                    <li>Basic Support</li>
+                </ul>
+                <span class="service-price">$199/month</span>
+                <a href="#contact" class="service-select-plan">Contact Us</a>
+            </div>
+    
+            <div class="service-pricing-card">
+                <h3>Standard</h3>
+                <p>For Growing Businesses</p>
+                <ul>
+                    <li>Advanced Mobile App Development</li>
+                    <li>SEO & Analytics</li>
+                    <li>Priority Support</li>
+                </ul>
+                <span class="service-price">$499/month</span>
+                <a href="#contact" class="service-select-plan">Contact Us</a>
+            </div>
+    
+            <div class="service-pricing-card">
+                <h3>Enterprise</h3>
+                <p>For Large Organizations</p>
+                <ul>
+                    <li>Custom Mobile Application Development</li>
+                    <li>Full SEO Suite</li>
+                    <li>Dedicated Support</li>
+                </ul>
+                <span class="service-price">Custom Pricing</span>
+                <a href="#contact" class="service-select-plan">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Projects -->
+    <section class="service-projects">
+        <h2>Our Featured Mobile Application Projects</h2>
+        <div class="service-projects-container">
+            <div class="service-project-card">
+                <img src="bs-web-design.png" alt="Project 1">
+                <h3>E-Commerce App</h3>
+            </div>
+            <div class="service-project-card">
+                <img src="bs-data-management.png" alt="Project 2">
+                <h3>Real Estate Mobile App</h3>
+            </div>
+            <div class="service-project-card">
+                <img src="bs-graphic-design.png" alt="Project 3">
+                <h3>Business Mobile App</h3>
+            </div>
+        </div>
+    </section>
+  
+
+<!-- Simple Solutions Section -->
+<section class="service-simple-solutions-section">
+    <h2 class="service-simple-solutions-heading">Simple Solutions!</h2>
+    <p class="service-simple-solutions-description">We understand that no two businesses are alike. Here's how we make it simple:</p>
+    <div class="service-solutions-list">
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">1</div>
+            <p>Contact us to boost your mobile presence</p>
+        </div>
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">2</div>
+            <p>Consultation available to answer your questions</p>
+        </div>
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">3</div>
+            <p>Place your order and we'll process it</p>
+        </div>
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">4</div>
+            <p>We accept payments from all types of banking</p>
+        </div>
+    </div>
+    <div class="service-cta-buttons-container">
+        <a href="#contact" class="service-cta-button-start">Get Started</a>
+        <a href="#learn-more" class="service-cta-button-readmore">Read More</a>
+    </div>
+</section>
+
+
+<!-- Our Agency Section -->
+<section class="service-agency-section">
+    <div class="service-agency-content">
+        <div class="service-agency-text">
+            <h2 class="service-agency-heading">Our Agency</h2>
+            <p class="service-agency-description">
+                We believe in the power of data. Our analytics-driven approach allows us to make informed decisions and optimize your marketing efforts for maximum ROI. Let's turn your data into actionable insights and tailor solutions for your business.
+            </p>
+            <a href="#" class="service-agency-read-more-btn">Read more</a>
+        </div>
+        <div class="service-agency-image">
+            <img src="main.png" alt="Our Agency">
+        </div>
+    </div>
+</section>
+
+
+<!-- Client Testimonials Section -->
+<section class="service-client-feedback-section">
+    <h2 class="service-feedback-heading">What Clients Say!</h2>
+    <p class="service-feedback-description">See how our mobile app development agency helped clients achieve their goals.</p>
+    
+    <div class="service-feedback-container">
+        <div class="service-feedback-card">
+            <div class="service-feedback-avatar">
+                <img src="client1.jpg" alt="Client 1">
+            </div>
+            <div class="service-feedback-content">
+                <p class="service-client-name">Jason Paul</p>
+                <p class="service-client-feedback">"The services were exceptional, and our online sales increased by 40% within a few months!"</p>
+                <div class="service-client-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-feedback-card">
+            <div class="service-feedback-avatar">
+                <img src="client2.jpg" alt="Client 2">
+            </div>
+            <div class="service-feedback-content">
+                <p class="service-client-name">Ashley Jane</p>
+                <p class="service-client-feedback">"Great communication, and they helped us improve our marketing strategy significantly!"</p>
+                <div class="service-client-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-feedback-card">
+            <div class="service-feedback-avatar">
+                <img src="client3.jpg" alt="Client 3">
+            </div>
+            <div class="service-feedback-content">
+                <p class="service-client-name">Noah Smith</p>
+                <p class="service-client-feedback">"Their team really understood our business needs and delivered exceptional results!"</p>
+                <div class="service-client-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-feedback-area">
+    <div class="service-feedback-wrapper">
+        <div class="service-feedback-text-section">
+            <h2 class="service-feedback-title">Give Us Your Feedback</h2>
+            <p class="service-feedback-description">
+                We value your input and would love to hear your thoughts! Please take a moment to provide your feedback on our services and help us improve.
+            </p>
+        </div>
+        <div class="service-feedback-form-section">
+            <form action="#" method="post">
+                <label for="feedback-rating" class="service-feedback-label">Rating</label>
+                <select id="feedback-rating" name="rating" class="service-feedback-input">
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <label for="feedback-comment" class="service-feedback-label">Comments</label>
+                <textarea id="feedback-comment" name="comments" class="service-feedback-textarea" placeholder="Share your feedback..."></textarea>
+
+                <button type="submit" class="service-feedback-submit-button">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="footer-container">
+    <div class="footer-left">
+        <h3>Brokesellers (Pvt) Ltd ®</h3>
+        <p>Ensuring quality and excellence in every project.</p>
+    </div>
+
+    <div class="footer-links">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <!-- Social Media Icons -->
+        <div class="social-media-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p>Developed by <strong>HB Grafix</strong></p>
+        <p>A Project of <strong>Azwa Enterprises</strong></p>
+    </div>
+</div>
+</body>
+</html>

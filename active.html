@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Footer</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Contact Form Container */
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    height: 100px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background: #222;
+    color: white;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-left h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-right {
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Footer Wrapper -->
+    <div class="footer-wrapper">
+
+        <!-- Contact Form Section -->
+        <div class="footer">
+            <div class="form-container contact" id="contact">
+                <form action="contact-form-handler.php" id="contactForm" method="POST" name="contactForm">
+                    <h2>Contact Us</h2>
+                    <p>Let's start <span>something</span> great. Fill up this quick form to send a direct message to our team.</p>
+                    
+                    <div class="form-group">
+                        <input class="form-control" id="contact-name" name="name" placeholder="Name" required type="text" autocomplete="given-name"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="contact-email" name="email" placeholder="Email" required type="email" autocomplete="email"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="contact-subject" name="subject" placeholder="Subject" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="contact-message" name="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn" type="submit" value="Send Message" />
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer Content -->
+            <div class="footer-container">
+                <div class="footer-left">
+                    <h3>Brokesellers (Pvt) Ltd ®</h3>
+                    <p>Ensuring quality and excellence in every project.</p>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-right">
+                    <p>Developed by <strong>HB Grafix</strong></p>
+                    <p>A Project of <strong>Azwa Enterprises</strong></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

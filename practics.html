@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="practics.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="practics.css">
+    <link rel="stylesheet" href="form.css">
+<body>
+    <nav class="navbar">
+        <div class="brand-container">
+            <div class="brand-logo">
+                <img id="logo" src="logo.png" alt="Brokesellers Logo">
+            </div>
+            <div class="brand-text">
+                <h1 class="brand-name">Brokesellers</h1>
+                <p class="brand-slogan">Digital Creative Hub</p>
+            </div>
+        </div>
+
+        <!-- Toggle Button (Hamburger) -->
+        <button class="toggle-button" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#services" onclick="toggleDropdown(event)">Services ▾</a>
+                <ul class="dropdown-menu" id="services-dropdown">
+                    <li><a href="web.html">Web Development</a></li>
+                    <li><a href="mob.html">Mobile App Development</a></li>
+                    <li><a href="seo.html">SEO Optimization</a></li>
+                    <li><a href="data-manage.html">Data Management</a></li>
+                    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing-container">Pricing</a></li>
+            <li><a href="users" target="_blank">Lab</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="mobile-cta"><button class="cta-button"><a href="#contact"></a>Contact Us</button></li>
+        </ul>
+
+        <!-- CTA Button (Only visible on larger screens) -->
+        <button class="cta-button desktop-cta"><a href="#contact">Contact Us</a></button>
+    </nav>
+
+    <button class="theme-toggle" id="theme-toggle">
+        <span id="icon" class="fas fa-sun"></span> <!-- Sun icon by default -->
+    </button>
+
+    <section class="tech-hero">
+        <div class="tech-content">
+            <h1>Innovate with <span>Tech Solutions</span></h1>
+            <p>Empowering businesses with AI-driven software. Scale, secure, and optimize with us.</p>
+            
+            <div class="tech-buttons">
+                <a href="#" class="tech-btn tech-start">Start Now</a>
+                <a href="#" class="tech-btn tech-contact">Contact Us</a>
+            </div>
+            
+            <div class="tech-stats">
+                <div class="tech-stat-box">
+                    <h2>10+</h2>
+                    <p>Years in Tech</p>
+                </div>
+                <div class="tech-stat-box">
+                    <h2>500K+</h2>
+                    <p>Clients Worldwide</p>
+                </div>
+                <div class="tech-stat-box">
+                    <h2>99.9%</h2>
+                    <p>System Uptime</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-image">
+            <img src="bs-web-design.png" alt="Tech Innovation">
+        </div>
+    </section>
+    
+    
+    
+    <div class="main">
+        <div class="section" id="intro">
+            <div class="intro-heading">
+                <h2>Personalized Solutions For Your Unique Business Needs</h2>
+            </div>
+    
+            <div class="intro-content">
+                <p>We specialize in Front-end &amp; Back-end Web Development, Graphic Design, UI/UX, Prototyping and Print Media Services.<br />	Hire a Professional or pick from a collection of well-curated plans designed by our team.</p>
+            </div>
+        </div>
+    </div>
+    <div class="service-section">
+        <div class="service-left">
+            <h2>Providing Top-Notch Software Services</h2>
+            <h3>Innovative tools and solutions for your business</h3>
+            <p>
+                We specialize in building customized software solutions that drive efficiency and growth.
+                Our services are designed to empower businesses through technology.
+            </p>
+            <ul>
+                <li>Tailored software solutions for diverse industries.</li>
+                <li>Expert consulting to meet your unique needs.</li>
+                <li>Innovative technology and strategies for better performance.</li>
+            </ul>
+            <button class="learn-more-btn">Learn More</button>
+        </div>
+        <div class="service-right">
+            <!-- Ensure the image source path is correct -->
+            <img src="main.png" alt="User" class="user-img">
+        </div>
+    </div>
+    
+    
+    
+    
+    
+        <!-- Services -->
+        <div class="section" id="services">
+            <div class="section-heading">
+                 <h2>Our Services</h2>
+            </div>
+            <div class="services-container">
+                 <div class="service-card">
+                     <img src="bs-graphic-design.png" alt="Graphic Designing">
+                        <div class="service-details">
+                             <h3>Graphic Designing</h3>
+                             <p>Digital & Print Media, Branding, Merchandise</p>
+                         <div class="service-links">
+                             <a href="#details">See Details</a>
+                             <a href="#contact">Pricing &gt;</a>
+                         </div>
+                         </div>
+                      </div>
+
+        <div class="service-card">
+            <img src="bs-web-design.png" alt="Web Development">
+            <div class="service-details">
+                <h3>Web Development</h3>
+                <p>UI/UX, E-Commerce, Web Apps, Portfolios</p>
+                <div class="service-links">
+                    <a href="web.html">See Details</a>
+                    <a href="web.html">Pricing &gt;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="bs-social-media.png" alt="Digital Marketing">
+            <div class="service-details">
+                <h3>Digital Marketing</h3>
+                <p>Social Media, SEO, Paid Ads, Email Marketing</p>
+                <div class="service-links">
+                    <a href="digital-marketing.html">See Details</a>
+                    <a href="#contact">Pricing &gt;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="bs-data-management.png" alt="Data Management">
+            <div class="service-details">
+                <h3>Data Management</h3>
+                <p>Data Collection, Analysis, Dashboards, Reports</p>
+                <div class="service-links">
+                    <a href="#details">See Details</a>
+                    <a href="#contact">Pricing &gt;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="bs-mobile-dev.png" alt="Mobile App Development">
+            <div class="service-details">
+                <h3>Mobile App Development</h3>
+                <p>iOS & Android Apps, Hybrid Solutions, UI/UX</p>
+                <div class="service-links">
+                    <a href="mob.html">See Details</a>
+                    <a href="#contact">Pricing &gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+        
+        <!-- Services End -->
+  
+        <div class="stats-section">
+            <div class="stats-left">
+                <h2>Our Stats</h2>
+                <p>We help you unleash the power within your business.</p>
+            </div>
+        
+            <div class="stats-right">
+                <div class="stat-item">
+                    <h3>260+</h3>
+                    <p>Expert Consultants</p>
+                    <div class="stat-line stat-line-1"></div>
+                </div>
+                <div class="stat-item">
+                    <h3>975+</h3>
+                    <p>Active Clients</p>
+                    <div class="stat-line stat-line-2"></div>
+                </div>
+                <div class="stat-item">
+                    <h3>724+</h3>
+                    <p>Projects Delivered</p>
+                    <div class="stat-line stat-line-3"></div>
+                </div>
+                <div class="stat-item">
+                    <h3>89+</h3>
+                    <p>Orders in Queue</p>
+                    <div class="stat-line stat-line-4"></div>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Issues Resolved</p>
+                    <div class="stat-line stat-line-5"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="development-process">
+            <h2 class="process-title">How Our Development Works</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">#1</div>
+                    <div class="step-content">
+                        <h3>Assemble the Right Team</h3>
+                        <p>We handle all aspects of hiring and choosing the right team for you, ensuring you don't have to find the right expertise on your own.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">#2</div>
+                    <div class="step-content">
+                        <h3>Sprint Planning</h3>
+                        <p>We create a detailed sprint plan to ensure timely delivery and promote collaboration within the team.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">#3</div>
+                    <div class="step-content">
+                        <h3>Tech Architecture</h3>
+                        <p>We design modular apps, microservices, and decouple your code for scalable and flexible solutions.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">#4</div>
+                    <div class="step-content">
+                        <h3>Standups & Weekly Demos</h3>
+                        <p>Frequent standups and demos allow for real-time feedback, keeping you in the loop and making necessary adjustments quickly.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">#5</div>
+                    <div class="step-content">
+                        <h3>Code Reviews</h3>
+                        <p>We ensure code quality through detailed reviews, ensuring best practices and scalability.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">#6</div>
+                    <div class="step-content">
+                        <h3>Iterative Delivery</h3>
+                        <p>We deliver key milestones, software increments, and processes regularly, ensuring you see results quickly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+        <!-- Pricing -->
+        <div class="pricing-container" id="pricing-container">
+            <h2>PRICING PLANS</h2>
+            <p>Choose the best plan that fits your needs</p>
+    
+            <div class="pricing-options">
+                <div class="pricing-card personal-plan">
+                    <div class="icon">💻</div>
+                    <h3>Personal</h3>
+                    <p>For Individuals & Freelancers</p>
+                    <ul>
+                        <li>Basic Web & Mobile Development</li>
+                        <li>Essential Digital Marketing</li>
+                        <li>Standard SEO Optimization</li>
+                        <li>Basic Data Management</li>
+                    </ul>
+                    <span class="price">$199/month</span>
+                    <button class="select-plan" onclick="openPopup('Personal')">Choose Plan</button>
+                </div>
+    
+                <div class="pricing-card business-plan">
+                    <div class="icon">🚀</div>
+                    <h3>Business</h3>
+                    <p>For Growing Companies</p>
+                    <ul>
+                        <li>Advanced Web & Mobile Solutions</li>
+                        <li>Strategic Digital Marketing</li>
+                        <li>Comprehensive SEO Services</li>
+                        <li>Secure Data Management</li>
+                    </ul>
+                    <span class="price">$499/month</span>
+                    <button class="select-plan" onclick="openPopup('Business')">Choose Plan</button>
+                </div>
+    
+                <div class="pricing-card enterprise-plan">
+                    <div class="icon">📊</div>
+                    <h3>Enterprise</h3>
+                    <p>For Large Organizations</p>
+                    <ul>
+                        <li>Fully Customized Web & Mobile Solutions</li>
+                        <li>AI-Driven Digital Marketing</li>
+                        <li>Enterprise SEO & Branding</li>
+                        <li>Advanced Data Analytics</li>
+                    </ul>
+                    <span class="price">Custom Pricing</span>
+                    <button class="select-plan" onclick="openPopup('Enterprise')">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+
+
+         
+        <div class="projects-section">
+            <div class="left-side">
+                <h2>Our Projects</h2>
+                <p>Explore the great projects we have delivered to our clients, empowering them to reach new heights.</p>
+                
+                <!-- Buttons for project categories -->
+                <div class="project-buttons">
+                    <button class="project-btn" onclick="filterProjects('all')">All Projects</button>
+                    <button class="project-btn" onclick="filterProjects('webdev')">Web Development</button>
+                    <button class="project-btn" onclick="filterProjects('mobileapp')">Mobile Apps</button>
+                    <button class="project-btn" onclick="filterProjects('seo')">SEO Optimization</button>
+                    <button class="project-btn" onclick="filterProjects('marketing')">Marketing</button>
+                    <button class="project-btn" onclick="filterProjects('datamgmt')">Data Management</button>
+                    <button class="project-btn" onclick="filterProjects('appdev')">App Development</button>
+                    <button class="project-btn" onclick="filterProjects('uiuxdesign')">UI/UX Design</button>
+                    <button class="project-btn" onclick="filterProjects('ecommerce')">E-commerce</button>
+                    <button class="project-btn" onclick="filterProjects('cloudsol')">Cloud Solutions</button>
+                </div>
+            </div>
+        
+            <div class="right-side">
+                <div class="projects-list" id="project-list">
+                    <div class="project-item webdev">
+                        <img src="brand-logo1.png" alt="Brand 1">
+                        <p>Web Project 1</p>
+                    </div>
+                    <div class="project-item mobileapp">
+                        <img src="brand-logo2.png" alt="Brand 2">
+                        <p>Mobile Project 1</p>
+                    </div>
+                    <div class="project-item seo">
+                        <img src="brand-logo3.png" alt="Brand 3">
+                        <p>SEO Project 1</p>
+                    </div>
+                    <div class="project-item marketing">
+                        <img src="brand-logo4.png" alt="Brand 4">
+                        <p>Marketing Project 1</p>
+                    </div>
+                    <div class="project-item datamgmt">
+                        <img src="brand-logo5.png" alt="Brand 5">
+                        <p>Data Project 1</p>
+                    </div>
+                    <div class="project-item appdev">
+                        <img src="brand-logo6.png" alt="Brand 6">
+                        <p>App Project 1</p>
+                    </div>
+                    <div class="project-item uiuxdesign">
+                        <img src="brand-logo7.png" alt="Brand 7">
+                        <p>UI/UX Project 1</p>
+                    </div>
+                    <div class="project-item ecommerce">
+                        <img src="brand-logo8.png" alt="Brand 8">
+                        <p>E-commerce Project 1</p>
+                    </div>
+                    <div class="project-item cloudsol">
+                        <img src="brand-logo9.png" alt="Brand 9">
+                        <p>Cloud Project 1</p>
+                    </div>
+                    <div class="project-item webdev">
+                        <img src="brand-logo10.png" alt="Brand 10">
+                        <p>Web Project 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+        
+        <!-- Popup Modal -->
+        <div id="service-popup" class="popup-container">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2 id="popup-title">Select a Service</h2>
+                <p>Choose a service under the selected plan</p>
+                <div class="service-options">
+                    <button class="service-btn" onclick="goToService('web.html')">Web Development</button>
+                    <button class="service-btn" onclick="goToService('mobile-apps.html')">Mobile Applications</button>
+                    <button class="service-btn" onclick="goToService('digital-marketing.html')">Digital Marketing</button>
+                    <button class="service-btn" onclick="goToService('seo.html')">SEO</button>
+                    <button class="service-btn" onclick="goToService('data-management.html')">Data Management</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <section class="blog-section">
+        <div class="blog-content">
+            <h1>What are VIRTUAL WORKSPACE?</h1>
+            <p>The term &ldquo;virtual workspace&rdquo; is generally used to describe a working environment where users digitally connect to each other regardless of their physical location. Users in a virtual workspace work together using tools that foster communication and collaboration.</p>
+                    <p>While this type of virtual environment started as a way to replicate a physical office, virtual workspaces are now used to improve efficiency, collaboration, and security.</p><br />
+                    <a class="btn" href="#">Read More...</a><br />&nbsp;
+        </div>
+        <div class="blog-image">
+            <div class="image-bg"></div>
+            <img src="blog-image.png" alt="Blog Image">
+        </div>
+    </section>
+
+    
+    <!--
+    <section class="section" id="managed">
+        <div class="section-heading">
+            <h2>Sign up for our managed services and save up to 20%</h2>
+        </div>
+        <div class="flex-row-responsive">
+            <ul>Our managed services include:
+                <li>20% Discount on all services and products.</li>
+                <li>Free consultation.</li>
+                <li>Dedicated team & unlimited support.</li>
+            </ul>
+            <a href="#" class="btn" id="signing-linkbtn">Sign Up</a>
+        </div>
+    </section>
+    
+    <section class="section" id="quot">
+        <div class="section-heading">
+            <h2>Get a Quote</h2>
+        </div>
+        <div class="flex-row-responsive" id="quotation">
+            <p>Let's discuss your needs and project requirements. Contact our team to get a comprehensive project brief and quotation.</p>
+        </div>
+    </section>
+    <!- Pricing End -->
+    
+    
+    
+    
+    
+        <!-- Blog -->
+      
+        <!-- Blog End -->
+    </div>
+    <!-- Main End -->
+    <!-- Home End -->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Footer Wrapper Start-->
+    <div class="footer-wrapper">
+        <!-- Footer Start-->
+        <div class="footer">
+            <div class="form-container contact" id="contact">
+                <div class="particles-container">
+                    <div id="particles-js"></div>
+                </div>
+                <form action="contact-form-handler.php" id="contactForm" method="POST" name="contactForm">
+                    <h2>Contact Us</h2>
+                    <p>Let's start <span>something</span> great. Fill up this quick form to send a direct message to our team.</p>
+                    <div class="form-group">
+                        <input class="form-control" id="contact-name" name="name" placeholder="Name" required type="text" autocomplete="given-name"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="contact-email" name="email" placeholder="Email" required type="email" autocomplete="email"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="contact-subject" name="subject" placeholder="Subject" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="contact-message" name="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn" type="submit" value="Send Message" />
+                    </div>
+                </form>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <h3>Brokesellers (Pvt) Ltd ®</h3>
+                        <p>Ensuring quality and excellence in every project.</p>
+                    </div>
+    
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                        <!-- Social Media Icons -->
+                        <div class="social-media-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-whatsapp"></a>
+                        </div>
+                    </div>
+    
+                    <div class="footer-right">
+                        <p>Developed by <strong>HB Grafix</strong></p>
+                        <p>A Project of <strong>Azwa Enterprises</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot"></div>
+    </div>
+    
+        <!-- Footer End -->
+    </div>
+    <!-- Footer Wrapper End -->
+    </div>
+    <!-- Container End -->
+    
+    <!-- Script Links -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+    <script src="main.js"></script>
+    </body>
+    </html>

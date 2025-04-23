@@ -1,0 +1,302 @@
+/* General Styling */
+
+
+@font-face {
+    font-family: "fontMain";
+    src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+  }
+  @font-face {
+    font-family: "fontPair";
+    src: url("../fonts/EBGaramond-VariableFont_wght.ttf");
+  }
+  
+  :root {
+    --clr-accent1: hsl(170, 75%, 40%);
+    --clr-accent2: hsl(40, 100%, 50%);
+  
+    --clr-primary: hsl(270, 90%, 20%);
+    --clr-primaryAlpha: hsla(270, 90%, 20%, 0.3);
+  
+    --clr-secondary: hsl(300, 70%, 30%);
+    --clr-secondaryAlpha: hsla(300, 70%, 30%, 0.3);
+  
+    --clr-dark: hsl(280, 80%, 10%);
+    --clr-darkAlpha: hsla(280, 80%, 5%, 0.3);
+    --clr-darkAlphalpha: hsla(280, 80%, 5%, 0.1);
+  
+    --clr-light: #ffffff;
+    --clr-lightAlpha: hsla(0, 0%, 100%, 0.3);
+    --clr-lightAlphaalpha: hsla(0, 0%, 100%, 0.1);
+  
+    --clr-neutral1: hsl(0, 0%, 80%);
+    --clr-neutral1-alpha: hsla(0, 0%, 80%, 0.5);
+    --clr-neutral1-alphalpha: hsla(0, 0%, 80%, 0.1);
+    --clr-neutral2: hsl(0, 0%, 50%);
+    --clr-neutral2-alpha: hsla(0, 0%, 50%, 0.5);
+    --clr-neutral2-alphalpha: hsla(0, 0%, 50%, 0.1);
+  
+    --shadowBox1: 0 0 5px 1px var(--clr-neutral1-alpha);
+    --shadowBox2: 0 0 10px 1px var(--clr-neutral2-alpha);
+    --shadowBox3: 0 0 5px 1px var(--clr-darkAlpha);
+  
+    --shadowTxt: 0 0 10px var(--clr-neutral2);
+  
+    --border: 1px solid var(--clr-neutral1-alphalpha);
+    --borderDark: 1px solid var(--clr-dark);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+body.light {
+  /* background-color: white; */
+  color: black;
+  background-color: var(--clr-accent1);
+}
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Style the body */
+  body {
+    background-color: var(--clr-accent1);
+    width: 100%;
+    margin: 0;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .body::-webkit-scrollbar {
+    display: none !important;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  ::-webkit-scrollbar {
+    width: 1vw;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--clr-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--clr-secondary);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-accent1);
+  }
+  
+  
+  
+  h1, h2, h3, h4, h5 {
+    font-family: "fontPair";
+  }
+  h2 {
+    font-size: clamp(1rem, 10dvw, 2rem);
+  }
+  h3 {
+      font-size: clamp(0.75rem, 10dvw, 1.5rem);
+  }
+  
+  p, a, span, input, textarea, ul {
+    font-family: "fontMain";
+    font-size: clamp(0.5rem, 10dvw, 1rem);
+  }
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 750px) {
+    .form-container {
+        height: auto;
+    }
+    .call {
+        right: 6%;
+    }
+}
+
+/* Form Container */
+.form-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: var(--clr-accent1);
+    background-image: linear-gradient(180deg, rgba(0,0,0,0), var(--clr-primary));
+    background-size: 200% 100%;
+    animation: bgclr 60s ease infinite;
+}
+
+@keyframes bgclr {
+    0% {
+        background-color: var(--clr-accent1);
+    }
+    25% {
+        background-color: var(--clr-dark);
+    }
+    50% {
+        background-color: var(--clr-primary);
+    }
+    75% {
+        background-color: var(--clr-dark);
+    }
+    100% {
+        background-color: var(--clr-accent1);
+    }
+}
+
+.form-container form {
+    height:100%;
+    font-family: "fontmain";
+    color: var(--clr-light);
+    background-color: var(--clr-darkAlpha);
+    backdrop-filter: blur(3px);
+    margin: 30px 0px;
+    padding: 20px 40px;
+    width: 400px;
+    box-shadow: 0px 0px 30px 5px var(--clr-accent1);
+    border: var(--clr-accent1) 1px solid;
+    animation: bordershadow 60s ease-in-out infinite;
+}
+
+@keyframes bordershadow {
+    0% {
+        border-color: hsla(172, 100%, 35%, 0.5);
+        box-shadow: 0px 0px 15px 0px hsla(172, 100%, 35%, 0.2);
+    }
+    25% {
+        border-color: hsla(209, 100%, 35%, 0.5);
+        box-shadow: 0px 0px 15px 0px hsla(209, 100%, 35%, 0.2);
+    }
+    50% {
+        border-color: hsla(268, 100%, 35%, 0.5);
+        box-shadow: 0px 0px 15px 0px hsla(268, 100%, 35%, 0.2);
+    }
+    75% {
+        border-color: hsla(209, 100%, 35%, 0.5);
+        box-shadow: 0px 0px 15px 0px hsla(209, 100%, 35%, 0.2);
+    }
+    100% {
+        border-color: hsla(172, 100%, 35%, 0.5);
+        box-shadow: 0px 0px 15px 0px hsla(172, 100%, 35%, 0.2);
+    }
+}
+
+.form-container h2 {
+    color: var(--clr-light);
+    text-align: center;
+    font-size: x-large;
+    text-shadow: var(--clr-dark) 0 0 3px;
+}
+
+.form-container p {
+    text-align: center;
+    color: var(--clr-light);
+}
+
+.form-container .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-container .form-control,
+.form-container .form-role,
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea,
+.form-container option,
+.form-container button {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    display: block;
+    border: 1px solid var(--clr-neutral1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: var(--clr-lightAlphalpha) !important;
+    color: var(--clr-light) !important;
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: var(--clr-neutral1);
+}
+
+::placeholder {
+  color: var(--clr-neutral1);
+}
+
+.form-container textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-container input[type="radio"],
+.form-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-container fieldset {
+    border: 1px solid var(--clr-neutral1-alpha);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.form-container legend {
+    font-weight: 600;
+}
+
+.form-container .btn,
+.form-container input[type="submit"] {
+    background-color: var(--clr-accent1);
+    color: var(--clr-light);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+.form-container .btn:hover,
+.form-container input[type="submit"]:hover {
+    background-color: var(--clr-neutral1);
+    color: var(--clr-dark);
+    text-shadow: 0px 0px 5px 0px var(--clr-dark);
+    box-shadow: 0px 0px 5px 0px var(--clr-dark);
+}
+
+
+
+#modal {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999999999999;
+}
+

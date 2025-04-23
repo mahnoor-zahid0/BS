@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Section</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 500px;
+    position: relative;
+}
+
+/* Left Section */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+}
+
+.big-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: purple;
+}
+
+.points-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Right Section - Scrollable Portfolio */
+.portfolio-container {
+    width: 70%;
+    height: 350px;
+    overflow-y: auto;
+    padding-left: 20px;
+}
+
+/* Scrollbar Styling */
+.portfolio-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Portfolio Items */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+/* Default Portfolio Item Style */
+.portfolio-item {
+    padding: 10px;
+    cursor: pointer;
+    background: whitesmoke;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active Portfolio Item (Highlighted) */
+.portfolio-item.active {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 40px;
+    margin: 20px;
+    height: 30px;
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+/* Number Styling */
+.number {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+    background: #ddd;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Headings */
+h3 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+/* Text */
+p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+                <button class="filter-btn" onclick="filterProjects('mobile')">Mobile Apps</button>
+                <button class="filter-btn" onclick="filterProjects('seo')">SEO</button>
+                <button class="filter-btn" onclick="filterProjects('graphics')">Graphics</button>
+                <button class="filter-btn" onclick="filterProjects('digital')">Digital Marketing</button>
+                <button class="filter-btn" onclick="filterProjects('data')">Data Management</button>
+            </div>
+        </div>
+    
+        <div class="title-section">
+            <h1 class="big-title">PORTFOLIO</h1>
+        </div>
+    
+        <div class="right-section">
+            <div class="portfolio-container">
+                <div class="portfolio-item web">Web Project 1</div>
+                <div class="portfolio-item web">Web Project 2</div>
+                <div class="portfolio-item mobile">Mobile App 1</div>
+                <div class="portfolio-item mobile">Mobile App 2</div>
+                <div class="portfolio-item seo">SEO Project 1</div>
+                <div class="portfolio-item seo">SEO Project 2</div>
+                <div class="portfolio-item graphics">Graphic Design 1</div>
+                <div class="portfolio-item graphics">Graphic Design 2</div>
+                <div class="portfolio-item digital">Digital Marketing 1</div>
+                <div class="portfolio-item data">Data Management 1</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".portfolio-item");
+
+    items.forEach(item => {
+        item.addEventListener("click", function () {
+            items.forEach(p => p.classList.remove("active")); // Remove active class from all
+            this.classList.add("active"); // Add active class to clicked item
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

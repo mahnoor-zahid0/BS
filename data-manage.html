@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="practics.css">
+    <link rel="stylesheet" href="service.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="brand-container">
+        <div class="brand-logo">
+            <img id="logo" src="logo.png" alt="Brokesellers Logo">
+        </div>
+        <div class="brand-text">
+            <h1 class="brand-name">Brokesellers</h1>
+            <p class="brand-slogan">Data Management Services</p>
+        </div>
+    </div>
+
+    <button class="toggle-button" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="practics.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#" onclick="toggleDropdown(event)">Services ▾</a>
+            <ul class="dropdown-menu" id="services-dropdown">
+                <li><a href="web.html">Web Application Development</a></li>
+                <li><a href="mob.html">Mobile App Development</a></li>
+                <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                <li><a href="data-manage.html">Data Management</a></li>
+                <li><a href="seo.html">SEO Optimization</a></li>
+            </ul>
+        </li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="users" target="_blank">Lab</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="mobile-cta"><button class="cta-button"  onclick="goToService('practics.html')">Contact Us</button></li>
+    </ul>
+
+    <!-- CTA Button (Only visible on larger screens) -->
+    <button class="cta-button desktop-cta" onclick="goToService('practics.html')">Contact Us</button>
+</nav>
+
+<!-- Hero Section -->
+<section class="service-hero">
+    <div class="service-hero-content">
+        <h1>Optimize Your Business with Comprehensive Data Management Services</h1>
+        <p>Our data management solutions help businesses efficiently manage, process, and secure their data for better decision-making and business operations.</p>
+        <a href="#pricing" class="service-cta-button">Get Started</a>
+    </div>
+    <div class="service-hero-image" id="hero-image">
+        <img src="bs-data-management.png" alt="Hero Image" id="hero-img">
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="service-features">
+    <h2>Why Choose Our Data Management Services?</h2>
+    <div class="service-feature-container">
+        <div class="service-feature">
+            <h3>Data Integration</h3>
+            <p>We help you integrate data from different sources, ensuring that all data flows seamlessly within your business ecosystem.</p>
+        </div>
+        <div class="service-feature">
+            <h3>Data Cleaning & Transformation</h3>
+            <p>We clean and transform your data to ensure its accuracy, consistency, and reliability for business analysis.</p>
+        </div>
+        <div class="service-feature">
+            <h3>Data Security & Compliance</h3>
+            <p>We prioritize data security by implementing robust security measures to safeguard your sensitive data and ensure compliance with regulations.</p>
+        </div>
+        <div class="service-feature">
+            <h3>Data Analytics & Reporting</h3>
+            <p>We provide actionable insights through data analytics and comprehensive reporting, helping you make informed decisions.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="service-pricing" id="pricing">
+    <h2>Pricing Plans</h2>
+    <p>Choose the best plan for your data management needs</p>
+    <div class="service-pricing-options">
+        <div class="service-pricing-card">
+            <h3>Basic</h3>
+            <p>For Small Businesses & Startups</p>
+            <ul>
+                <li>Data Integration for Basic Systems</li>
+                <li>Monthly Data Clean-up</li>
+                <li>Standard Security Measures</li>
+            </ul>
+            <span class="service-price">$199/month</span>
+            <a href="#contact" class="service-select-plan">Contact Us</a>
+        </div>
+
+        <div class="service-pricing-card">
+            <h3>Standard</h3>
+            <p>For Growing Businesses</p>
+            <ul>
+                <li>Advanced Data Integration</li>
+                <li>Data Transformation and Reporting</li>
+                <li>Enhanced Security & Compliance</li>
+                <li>Bi-weekly Data Audits</li>
+            </ul>
+            <span class="service-price">$499/month</span>
+            <a href="#contact" class="service-select-plan">Contact Us</a>
+        </div>
+
+        <div class="service-pricing-card">
+            <h3>Enterprise</h3>
+            <p>For Large Organizations</p>
+            <ul>
+                <li>End-to-End Data Management Solutions</li>
+                <li>Real-Time Data Monitoring</li>
+                <li>Full Compliance & Regulatory Services</li>
+                <li>24/7 Data Security and Support</li>
+            </ul>
+            <span class="service-price">Custom Pricing</span>
+            <a href="#contact" class="service-select-plan">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="service-projects">
+    <h2>Our Featured Data Management Projects</h2>
+    <div class="service-projects-container">
+        <div class="service-project-card">
+            <img src="bs-web-design.png" alt="Project 1">
+            <h3>Data Integration for E-Commerce</h3>
+        </div>
+        <div class="service-project-card">
+            <img src="bs-data-management.png" alt="Project 2">
+            <h3>Data Security for Financial Services</h3>
+        </div>
+        <div class="service-project-card">
+            <img src="bs-graphic-design.png" alt="Project 3">
+            <h3>Real-Time Data Processing for Healthcare</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Simple Solutions Section -->
+<section class="service-simple-solutions-section">
+    <h2 class="service-simple-solutions-heading">Simple Solutions!</h2>
+    <p class="service-simple-solutions-description">We understand that data management can be complex. Here's how we make it simple:</p>
+    <div class="service-solutions-list">
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">1</div>
+            <p>Contact us to discuss your data management requirements</p>
+        </div>
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">2</div>
+            <p>We assess your current data systems and propose solutions</p>
+        </div>
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">3</div>
+            <p>We implement the necessary tools and systems to manage your data</p>
+        </div>
+        <div class="service-solutions-list-item">
+            <div class="service-point-circle">4</div>
+            <p>We provide continuous monitoring and optimization</p>
+        </div>
+    </div>
+    <div class="service-cta-buttons-container">
+        <a href="#contact" class="service-cta-button-start">Get Started</a>
+        <a href="#learn-more" class="service-cta-button-readmore">Read More</a>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="service-client-feedback-section">
+    <h2 class="service-feedback-heading">What Clients Say!</h2>
+    <p class="service-feedback-description">See how our data management solutions helped clients achieve their goals.</p>
+    
+    <div class="service-feedback-container">
+        <div class="service-feedback-card">
+            <div class="service-feedback-avatar">
+                <img src="client1.jpg" alt="Client 1">
+            </div>
+            <div class="service-feedback-content">
+                <p class="service-client-name">Mark Taylor</p>
+                <p class="service-client-feedback">"Their data management solutions helped us integrate all of our data sources seamlessly."</p>
+                <div class="service-client-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-feedback-card">
+            <div class="service-feedback-avatar">
+                <img src="client2.jpg" alt="Client 2">
+            </div>
+            <div class="service-feedback-content">
+                <p class="service-client-name">Sarah Lee</p>
+                <p class="service-client-feedback">"The team provided exceptional data security solutions and ensured our compliance with all regulations."</p>
+                <div class="service-client-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-feedback-card">
+            <div class="service-feedback-avatar">
+                <img src="client3.jpg" alt="Client 3">
+            </div>
+            <div class="service-feedback-content">
+                <p class="service-client-name">David Kim</p>
+                <p class="service-client-feedback">"Their data analytics and reporting have provided us with actionable insights that are transforming our business."</p>
+                <div class="service-client-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="service-feedback-area">
+    <div class="service-feedback-wrapper">
+        <div class="service-feedback-text-section">
+            <h2 class="service-feedback-title">Get Started with Our Data Management Services</h2>
+            <p class="service-feedback-description">
+                Contact us today to discuss how our data management solutions can optimize your business operations and drive success.
+            </p>
+        </div>
+        <div class="service-feedback-form-section">
+            <form action="#" method="post">
+                <label for="feedback-rating" class="service-feedback-label">Rating</label>
+                <select id="feedback-rating" name="rating" class="service-feedback-input">
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <label for="feedback-comment" class="service-feedback-label">Comments</label>
+                <textarea id="feedback-comment" name="comments" class="service-feedback-textarea" placeholder="Share your feedback..."></textarea>
+
+                <button type="submit" class="service-feedback-submit-button">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<div class="footer-container">
+    <div class="footer-left">
+        <h3>Brokesellers (Pvt) Ltd ®</h3>
+        <p>Ensuring quality and excellence in every project.</p>
+    </div>
+
+    <div class="footer-links">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <!-- Social Media Icons -->
+        <div class="social-media-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p>Developed by <strong>HB Grafix</strong></p>
+        <p>A Project of <strong>Azwa Enterprises</strong></p>
+    </div>
+</div>
+</body>
+</html>
